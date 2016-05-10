@@ -42,15 +42,9 @@
                         <!-- <div ng-hide="isAuthenticated()" type="button" class="btn btn-primary" ng-click="signUp()">Sign up</div> -->
                     </form>
                 </ul>
-<<<<<<< HEAD
-                <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated()">
-                    <!-- <ul class="nav navbar-nav navbar-right"> -->
-                    <li ng-click="logout()" ui-sref="home">
-=======
                 <ul class="nav navbar-nav navbar-right" ng-show="currentUser">
                 <!-- <ul class="nav navbar-nav navbar-right"> -->
                     <li ng-click="logOut()" ui-sref="home">
->>>>>>> parent of 165a460... add logo
                         <a class="btn btn-link">Logout</a>
                     </li>
                     <li  ui-sref="profileSetting">
@@ -66,10 +60,6 @@
     <div class="container">
         <ui-view></ui-view>
     </div>
-<<<<<<< HEAD
-    <!-- <img class="logo" src="../css/logo.svg" ></span> -->
-=======
->>>>>>> parent of 165a460... add logo
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
