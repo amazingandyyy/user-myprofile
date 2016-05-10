@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>myProfile</title>
+    <title>Auth</title>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-    <link rel="shortcut icon" type="image/png" href="../css/favicon.png"/>
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" ui-sref="home"><span><img src="../css/logo.svg" style="height: 35px;"></span> myProfile</a>
+                <a class="navbar-brand" ui-sref="home">myProfile</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,12 +42,18 @@
                         <!-- <div ng-hide="isAuthenticated()" type="button" class="btn btn-primary" ng-click="signUp()">Sign up</div> -->
                     </form>
                 </ul>
+<<<<<<< HEAD
                 <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated()">
                     <!-- <ul class="nav navbar-nav navbar-right"> -->
                     <li ng-click="logout()" ui-sref="home">
+=======
+                <ul class="nav navbar-nav navbar-right" ng-show="currentUser">
+                <!-- <ul class="nav navbar-nav navbar-right"> -->
+                    <li ng-click="logOut()" ui-sref="home">
+>>>>>>> parent of 165a460... add logo
                         <a class="btn btn-link">Logout</a>
                     </li>
-                    <li ui-sref="profileSetting">
+                    <li  ui-sref="profileSetting">
                         <a class="btn btn-link">Setting</a>
                     </li>
                 </ul>
@@ -60,7 +66,10 @@
     <div class="container">
         <ui-view></ui-view>
     </div>
+<<<<<<< HEAD
     <!-- <img class="logo" src="../css/logo.svg" ></span> -->
+=======
+>>>>>>> parent of 165a460... add logo
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

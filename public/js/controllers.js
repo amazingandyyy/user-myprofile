@@ -3,6 +3,7 @@
 var app = angular.module('myApp');
 
 
+<<<<<<< HEAD
 app.controller('mainCtrl', function($http, $scope, Auth, $state, $auth) {
 
     $scope.authenticate = (provider) => {
@@ -10,6 +11,9 @@ app.controller('mainCtrl', function($http, $scope, Auth, $state, $auth) {
         $auth.authenticate(provider);
     };
 
+=======
+app.controller('mainCtrl', function($http,$scope, Auth) {
+>>>>>>> parent of 165a460... add logo
     console.log('mainCtrl loaded');
     Auth.getProfile().then(function(res) {
         console.log(res);
@@ -20,6 +24,7 @@ app.controller('mainCtrl', function($http, $scope, Auth, $state, $auth) {
         console.log('user is not logged in.');
     })
 
+<<<<<<< HEAD
     $scope.logIn = (loginInfo) => {
         Auth.login(loginInfo)
             .then(function(res) {
@@ -34,6 +39,40 @@ app.controller('mainCtrl', function($http, $scope, Auth, $state, $auth) {
     }
     $scope.isAuthenticated = () => {
             return $auth.isAuthenticated();
+=======
+        $scope.logIn = (loginInfo) => {
+            Auth.login(loginInfo)
+                .then(function(res) {
+                    $scope.currentUser = res.data;
+                    $scope.loginInfo = null;
+                }, function(err) {
+                    console.log('err: ', err);
+                })
+        }
+        $scope.logOut = () => {
+            console.log('Out');
+            Auth.logout()
+                .then(function(res) {
+                    $scope.currentUser = null;
+                    $scope.loginInfo = null;
+                }, function(err) {
+                    console.log('err: ', err);
+                })
+        }
+        $scope.signUp = (newUser) => {
+            console.log('create');
+            console.log(newUser);
+            Auth.register(newUser)
+                .then(function(res) {
+                    console.log(res);
+                    $scope.newUser = null;
+                    $scope.logIn(newUser);
+                    $scope.logMsg.err = null;
+                }, function(err) {
+                    console.log('err: ', err);
+                    $scope.logMsg = {err: 'Username is been taken!'}
+                })
+>>>>>>> parent of 165a460... add logo
         }
         // $scope.logOut = () => {
         //     console.log('Out');
